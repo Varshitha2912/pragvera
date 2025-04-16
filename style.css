@@ -1,0 +1,1420 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Overall Page Background */
+body {
+    background: linear-gradient(135deg, #f3f4f6, #fcfafa61),url('images/istockphoto.jpg'); /* Light gradient background */
+    font-family: "Poppins", sans-serif; /* Ensure consistent font */
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+}
+
+.header {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.638), rgba(205, 202, 202, 0.485), rgba(0, 0, 0, 0.5)), url('images/3.jpg'); /* Add image background */
+    background-position: fill;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Space between logos and links */
+    align-items: center; /* Center items vertically */
+    position: absolute;
+    height: 12%;
+    top: 2%;
+    width: 95%;
+    margin-left: 2%;
+    margin-right: -2%;
+    padding: 10px 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Align images vertically */
+    gap: 5px; /* Add spacing between the images */
+}
+
+.home-logo {
+    height: 50px; /* Adjust the size of the primary logo */
+}
+
+.secondary-logo {
+    height: 40px; /* Adjust the size of the secondary logo */
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none; /* Remove default list styling */
+    gap: 50px; /* Add spacing between links */
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.nav-links ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: rgb(0, 0, 0); /* Keep the link color white */
+    font-size: 20px; /* Adjust font size */
+    transition: all 0.3s; /* Smooth transition for hover effect */
+    font-family: "Poppins", sans-serif; /* Add custom font */
+    position: relative; /* Set position for pseudo-element */
+}
+
+.nav-links ul li a::after {
+    content: ''; /* Add an empty pseudo-element */
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Position the underline slightly below the text */
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: rgb(182, 4, 4); /* Red underline */
+    transition: width 0.3s ease; /* Smooth transition for underline */
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%; /* Expand the underline on hover */
+}
+.text-box {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; /* Align text to the left */
+    color: #000000;
+    z-index: 1; /* Ensure text is on top of the background */
+    font-family: "Poppins", sans-serif; /* Add custom font */
+}
+
+.text-box h2 {
+    font-size: 36px; /* Default font size */ 
+    text-shadow: 3px 3px 4px rgba(250, 249, 249, 0.896);
+
+}
+/* Services Page Header */
+.services-header {
+    margin-top: 3.2%;
+    height: 10vh; /* Keep the same height as the index page */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 10;
+    background-image: none;
+}
+/* Services Intro Section */
+.services-intro {
+    text-align: center; /* Center-align the text */
+    padding: 40px 20px; /* Add spacing around the text */
+    background: linear-gradient(130deg,#b60e0e,#0a0a0af1);
+    font-family: "Poppins", sans-serif; /* Consistent font */
+    border-bottom: 1px solid #ddd; /* Optional: Add a subtle border below */
+}
+
+.services-intro h2 {
+    font-size: 36px; /* Large font size for the heading */
+    color: #080808; /* Dark text color */
+    margin-bottom: 10px;
+    display: none;
+}
+
+.services-intro p {
+    font-size: 20px; /* Smaller font size for the subtitle */
+    color: #eeebeb; /* Subtle text color */
+    margin-bottom: 0;
+}
+/* Services Container */
+.services-container {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 30px; /* Space between cards */
+    margin: 50px auto; /* Center the container */
+    padding: 20px;
+    grid-auto-rows: 1fr;
+    border-radius: 5px; /* Rounded corners */
+    max-width: 1200px; /* Limit the width of the container */
+}
+
+.services-header .text-box {
+    text-align: center; /* Center-align text */
+    color: #333; /* Dark text color */
+    position: relative;
+    z-index: 2;
+}
+
+.services-header .text-box h2 {
+    font-size: 60px; /* Large font size for the title */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.services-header .text-box p {
+    font-size: 30px; /* Subtitle font size */
+    color: #555;
+    margin-bottom: 20px;
+}
+/* Service Card Styling */
+.service-card {
+    position: relative; /* Ensure the hover image is positioned relative to the card */
+    overflow: hidden; /* Prevent the hover image from overflowing the card */
+    background: linear-gradient(135deg, #ffffff, #f9f9f9); /* Subtle gradient background */
+    border: 1px solid #ddd; /* Light border */
+    height: 100%;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    text-align: center; /* Center-align content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Hidden hover image */
+.service-card .hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover; /* Cover the entire card */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+    z-index: 1; /* Ensure the image is below the card content */
+}
+.service-card .hover-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.573); /* Semi-transparent black overlay */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+    z-index: 2; /* Ensure it appears above the hover image */
+}
+/* Show the image on hover */
+.service-card:hover .hover-image {
+    opacity: 1; /* Make the image visible */
+}
+.service-card:hover .hover-image::after {
+    opacity: 1; /* Make the black overlay visible */
+}
+.service-card .service-icon img {
+    position: relative;
+    z-index: 3; /* Ensure the logo stays above the hover image */
+}
+/* Change text color to white on hover */
+.service-card:hover h3,
+.service-card:hover ul li {
+    color: white; /* Change text color to white */
+}
+
+/* Ensure card content stays above the image */
+.service-card h3,
+.service-card ul {
+    position: relative;
+    z-index: 2;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.service-card ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Align list items to the left */
+}
+
+.service-card ul li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 20px;
+}
+
+.service-card ul li::before {
+    content: "•"; /* Add a bullet point */
+    color: #b60e0e; /* Purple bullet color */
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* Center the last card in the grid */
+.services-container .service-card:last-child {
+    grid-column: 1 / -1; /* Make the last card span the entire row */
+    justify-self: center; /* Center the card horizontally */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .services-header .text-box h2 {
+        font-size: 32px; /* Smaller font size for tablets */
+    }
+
+    .services-header .text-box p {
+        font-size: 14px; /* Smaller subtitle font size */
+    }
+}
+.highlight {
+    color: rgb(182, 4, 4); /* Red color for the word "Solutions" */
+    font-weight: bold; /* Optional: Make it bold */
+}
+
+/* Hero button styling */
+.hero-btn {
+    display: inline-block;
+    margin-top: 20px;
+    border: 0px solid #fbfafa; /* Add a border with the same color as the background */
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color:white;
+    color: #ab0303;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+}
+
+.hero-btn:hover {
+    background-color: #ab0303;
+    box-shadow: #000000; /* Darker background on hover */
+    box-shadow: 10px 10px 10px rgba(0.4, 0, 0, 0.4); /* Shadow effect on hover */
+    color: #ffffff; /* Change text color on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: translateY(-3px);
+
+}
+/* Home Page Logo Styling */
+.home-logo {
+    height: 80px; /* Adjust the height for the home page */
+    width: auto; /* Maintain aspect ratio */
+    margin-top: 20px; /* Add spacing above the logo */
+    margin-bottom: 20px; /* Add spacing below the logo */
+    transition: transform 0.3s ease; /* Add a smooth hover effect */
+}
+@media (max-width: 700px) {
+    .logo {
+        margin-top: 80%;/* Adjust logo size for smaller screens */
+    }
+    .hero-btn {
+        font-size: 10px; /* Smaller font size for smaller screens */
+    }
+    .nav-links ul {
+        gap: 20px; /* Reduce spacing between links */
+    }
+    .home-logo {
+        margin-top: -25%; /* Adjust logo size for smaller screens */
+    }
+}
+/* Hamburger menu styling */
+.hamburger-menu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute; /* Position it absolutely */
+    top: 20px; /* Adjust the position */
+    right: 20px; /* Adjust the position */
+    z-index: 10; /* Ensure it overlaps the text box */
+}
+
+.hamburger-menu div {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(147, 4, 4); /* Red color for the lines */
+}
+
+/* Show hamburger menu on smaller screens */
+@media (max-width: 700px) {
+    .nav-links {
+        display: none; /* Hide navigation links by default */
+        position: absolute;
+        top: 60px; /* Adjust based on your nav height */
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.721); /* Background for the dropdown */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+        padding: 10px;
+        border-radius: 5px; /* Optional rounded corners */
+        z-index: 9; /* Ensure it is below the hamburger menu */
+    }
+
+    .nav-links ul {
+        flex-direction: column; /* Stack links vertically */
+        list-style: none; /* Remove bullets */
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links ul li {
+        margin: 10px 0; /* Add spacing between links */
+    }
+
+
+    .nav-links ul li a {
+        color: rgb(0, 0, 0); /* Red color for links */
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger menu */
+    }
+}
+
+/* Industries Served Section */
+.industries-served {
+    background: linear-gradient(10deg, #fbf9f900, #fffefe25); /* Linear gradient background */
+    padding: 50px 20px; /* Add spacing around the section */
+    text-align: center; /* Center-align text */
+    border-radius: 20px; /* Rounded corners */
+}
+
+.industries-served h2 {
+    font-size: 36px; /* Large font size for the heading */
+    color: #070707; /* Dark text color */
+    margin-bottom: 10px;
+}
+
+.industries-served p {
+    font-size: 16px; /* Smaller font size for the subtitle */
+    color: #130101; /* Subtle text color */
+    margin-bottom: 40px;
+}
+
+.industries-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive columns */
+    gap: 30px; /* Space between circles */
+    justify-items: center; /* Center-align items in the grid */
+}
+
+.industry-circle {
+    text-align: center; /* Center-align content */
+}
+
+.circle-icon {
+    width: 100px; /* Fixed width for the circle */
+    height: 100px; /* Fixed height for the circle */
+    background-color: #ffffff; /* White background for the circle */
+    border: 2px solid #ddd; /* Light border */
+    border-radius: 50%; /* Make it circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensure the image stays within the circle */
+}
+
+.circle-icon img {
+    width: 80%; /* Make the image fill the container */
+    height: 80%; /* Make the image fill the container */
+    object-fit: contain; /* Ensure the image scales proportionally and covers the circle */
+    border-radius: 20%; /* Ensure the image matches the circular shape */
+}
+
+.industry-circle h3 {
+    font-size: 14px; /* Font size for the title */
+    color: #b30505; /* Dark text color */
+    margin: 0;
+}
+
+
+.circle-icon:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    box-shadow: 0 10px 20px rgba(234, 4, 4, 0.626); /* Stronger shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .industries-served h2 {
+        font-size: 28px; /* Smaller font size for tablets */
+    }
+
+    .industries-served p {
+        font-size: 14px; /* Smaller subtitle font size */
+    }
+
+    .circle-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .industry-circle h3 {
+        font-size: 12px;
+    }
+}
+
+footer {
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    padding: 40px 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px; /* Ensure columns don't shrink too much */
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-column p,
+.footer-column a {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.footer-column a:hover {
+    color: rgb(182, 4, 4); /* Red hover effect */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+}
+
+.footer-bottom ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .footer-bottom ul {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center-align the links */
+        gap: 10px; /* Reduce the gap between links */
+        
+    }
+    .footer-bottom ul li {
+        display: none; /* Hide list items in the footer */
+    }
+}
+
+.footer-bottom ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 10px;
+    border: 1px solid rgb(249, 249, 251);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.footer-bottom ul li a:hover {
+    background-color: white;
+    color: #333;
+}
+.why-choose-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #ffffff, #fffefe);
+    font-family: "Poppins", sans-serif;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-bottom: 30px;
+    border-radius: 8%;
+}
+
+.why-left {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.why-left .why-title h2 {
+    font-size: 48px;
+    color: rgb(20, 20, 20);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.why-left p {
+    font-size: 16px;
+    color: rgba(18, 17, 17, 0.8);
+    line-height: 1.6;
+}
+
+.why-right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.icon-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.icon-text h4 {
+    font-size: 20px;
+    color: rgb(11, 0, 0);
+    margin-bottom: 5px;
+}
+
+.icon-text p {
+    font-size: 14px;
+    color: rgba(14, 14, 14, 0.8);
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .why-choose-us {
+        flex-direction: column; /* Stack the left and right sections vertically */
+        align-items: center;
+        text-align: center;
+        margin-left: 0%;
+        margin-right: 0%;
+        border-radius: 3%;
+        padding-bottom: 5%;
+    }
+
+    .why-left {
+        width: 100%; /* Full width for the left section */
+        margin-bottom: 20px; /* Add spacing below the left section */
+    }
+
+    .why-right {
+        width: 100%; /* Full width for the right section */
+    }
+
+    .icon-box {
+        flex-direction: column; /* Stack icon and text vertically */
+        text-align: center;
+        gap: 10px; /* Reduce gap between icon and text */
+    }
+    .icon {
+        width: 60px; /* Adjust icon size for smaller screens */
+        height: 60px;
+    }
+
+    .icon img {
+        width: 30px; /* Adjust image size for smaller screens */
+        height: 30px;
+    }
+
+    .icon-text h4 {
+        font-size: 18px; /* Adjust heading size */
+    }
+
+    .icon-text p {
+        font-size: 14px; /* Adjust paragraph size */
+    }
+}
+/* Testimonials Section */
+.testimonials {
+    padding: 60px 20px;
+    text-align: center;
+    margin: 40px 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials-title h2 {
+    font-size: 36px;
+    color: #070001;
+    margin-bottom: 10px;
+}
+
+.testimonials-title p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.testimonial-box {
+    background: rgb(235, 231, 231);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    flex: 1;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-box p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.testimonial-box h4 {
+    font-size: 16px;
+    color: #551616;
+    margin-bottom: 5px;
+}
+
+.testimonial-box span {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonials-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-box {
+        max-width: 90%;
+    }
+}
+/* About Us Section */
+.about-us {
+    background-color: #fffcfc; /* light background */
+    color: rgb(0, 0, 0); /* black text */
+    padding: 60px 20px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    margin: 40px 20px;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text h3 {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    color: rgb(14, 1, 1);
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.about-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.about-text ul li {
+    font-size: 14px;
+    color: #040404;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 20px;
+}
+
+.about-text ul li::before {
+    content: "•";
+    color: #020004;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.about-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.stat-box {
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+}
+
+.stat-box h2 {
+    font-size: 36px;
+    color: rgb(14, 14, 14);
+    margin-bottom: 10px;
+}
+
+.stat-box p {
+    font-size: 14px;
+    color: #0b0b0b;
+}
+/* More Button Styling */
+.more-btn {
+    display: inline-block;
+    margin-top: 20px;
+    border: 2px solid #cbcbcb; 
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: white;
+    color: #ab0303;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.more-btn:hover {
+    background-color: #ab0303;
+    border: 2px solid #faf8f8; 
+    box-shadow: #000000; /* Darker background on hover */
+    box-shadow: 10px 10px 10px rgba(0.4, 0, 0, 0.4); /* Shadow effect on hover */
+    color: #000000; /* Change text color on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: translateY(-3px);
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+/* LinkedIn Feed Section */
+.linkedin-feed {
+    padding: 60px 20px;
+    background-color: #dad8d8;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.linkedin-header h2 {
+    font-size: 36px;
+    color: #110101; /* LinkedIn blue */
+    margin-bottom: 10px;
+}
+
+.linkedin-header p {
+    font-size: 16px;
+    color: #2e2d2d;
+    margin-bottom: 40px;
+}
+
+.linkedin-embed iframe {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.linkedin-btn {
+    display: inline-block;
+    margin-top: 20px;
+    border: 2px solid #cbcbcb;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: white;
+    color: #ab0303;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.linkedin-btn:hover {
+    background-color: #ab0303;
+    box-shadow: #000000; /* Darker background on hover */
+    box-shadow: 10px 10px 10px rgba(0.4, 0, 0, 0.4); /* Shadow effect on hover */
+    color: #000000; /* Change text color on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: translateY(-3px);
+    color: #ffffff;
+
+}
+
+/* Contact Header */
+.contact-header {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 28px;
+    color: #b30505; /* Red heading color */
+    margin-bottom: 30px;
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form .form-group {
+    display: flex;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: #b30505; /* Red button color */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #b30505; /* Darker red on hover */
+}
+
+/* Contact Map */
+.contact-map {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-form,
+    .contact-map {
+        width: 100%;
+    }
+}
+/* Content Container */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 0; /* Remove space between containers */
+    flex-wrap: wrap; /* Ensure responsiveness */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Main Container */
+.main-container {
+    padding: 50px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+/* Vision, Mission, Values Section */
+.vision-mission-values {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+.mission-box{
+    text-align: right;
+}
+.vision-box{
+    text-align: left;
+}
+
+.vmv-box {
+    flex: 1;
+}
+.vmv img {
+    width: 650px; /* Set the width of the image */
+    height: auto; /* Maintain the aspect ratio */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effects */
+}
+.vmv-box .icon img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Heading and Text */
+.vmv-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #0a0a0a;
+}
+
+.vmv-box p {
+    font-size: 16px;
+    color: #070707;
+    line-height: 1.6;
+}
+
+/* Specific Colors for Each Section */
+
+.mission-box h3 {
+    color: #b30505;
+}
+
+
+
+.vision-box h3 {
+    color: #b30505;
+}
+/* Founder's Desk Section */
+.founders-desk-section {
+    padding: 50px 20px;
+    background-color: #f9f9f900; /* Light background */
+}
+
+.founders-desk-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 5000px;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    max-width: 95%;
+    margin-left: 5%;
+}
+
+/* Content Styling */
+.founders-content {
+    flex: 1;
+    text-align: left;
+}
+
+.founders-content h2 {
+    font-size: 18px;
+    color: #b30505; /* Red heading color */
+    margin-bottom: 20px;
+}
+
+.founders-content p {
+    font-size: 18px;
+    color: #070707;
+    line-height: 2;
+    margin-bottom: 15px;
+    text-align: justify; /* Justify text for better readability */
+}
+
+/* Photo Styling */
+.founders-photo {
+    flex: 1;
+    text-align: center;
+}
+
+.founders-photo img {
+    width: 100%;
+    max-width: 400px; /* Limit the photo size */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .founders-desk-container {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+        font-size: 16px;
+    }
+    .vmv img {
+        width: 50%; /* Set the width of the image */
+        height: auto; /* Maintain the aspect ratio */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effects */
+    }
+
+    .founders-content {
+        text-align: center;
+    }
+
+    .founders-photo img {
+        max-width: 300px; /* Adjust photo size for smaller screens */
+    }
+}
+
+/* Values List Section */
+.values-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.value-item {
+    border-top: 5px solid; /* Define the top border */
+    border-image: linear-gradient(135deg, #080808, #b30505) 1; /* Apply a linear gradient to the top border */
+    border-radius: 0 0 10px 10px; /* Rounded corners only at the bottom */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+.value-item h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.value-item p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+/* Values Heading */
+.values-heading {
+    text-align: center;
+    font-size: 20px;
+    color: #b30505;
+    margin: 30px 0 20px; /* Add spacing above and below the heading */
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .vision-mission-values {
+        flex-direction: column; /* Stack boxes vertically */
+        text-align: center;
+        align-items: center;
+        margin-right: 2%;
+    }
+
+    .vmv-box {
+        margin-bottom: 20px;
+    }
+
+    .values-list {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
+.grow-with-us{
+    align-items: center;
+    margin-top: 40px;
+    max-width: 5000px;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 18px;
+    color: #070707;
+    line-height: 2;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+@media screen and (max-width: 768px) {
+    .grow-with-us {
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+    
+}
+/* Career Highlights Section */
+.career-highlights {
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Light background */
+}
+
+.highlight-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.highlight-box {
+    flex: 1;
+    padding: 10px;
+    text-align: left;
+}
+.highlight-box h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.highlight-box p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .highlight-container {
+        flex-direction: column; /* Stack boxes vertically */
+    }
+
+    .highlight-box {
+        margin-bottom: 20px; /* Add spacing between stacked boxes */
+    }
+}
+/* Job Search Section */
+.job-search-section {
+    background-color: #e0e0e0df; /* Dark background */
+    padding: 20px;
+    text-align: center;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-button {
+    font-size: 14px;
+    color: white;
+    background-color: #ab0303;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #f8f6f6;
+    color: #ab0303;
+}
+
+.clear-link{
+    font-size: 14px;
+    color: #0b0b0b;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.clear-link:hover{
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+    .clear-link{
+        margin-left: 0;
+    }
+}
+/* Job List Section */
+.job-list-section {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background */
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.job-list-table {
+    width: 100%;
+    border-collapse: collapse; /* Remove gaps between table cells */
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+.job-list-table thead {
+    background-color: #f1f1f1; /* Light gray background for the header */
+}
+
+.job-list-table th {
+    padding: 10px;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 2px solid #ddd; /* Add a bottom border */
+}
+
+.job-list-table td {
+    padding: 10px;
+    color: #555;
+    border-bottom: 1px solid #ddd; /* Add a bottom border for rows */
+}
+
+.job-list-table tr:hover {
+    background-color: #f5f5f5; /* Highlight row on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .job-list-table {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .job-list-table th,
+    .job-list-table td {
+        padding: 8px;
+    }
+}
+/* Job Description Row */
+.job-description {
+    display: none; /* Initially hidden */
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    color: #1f1e1e;
+    padding: 10px;
+}
+
+.job-description td {
+    padding: 10px;
+    color: #110101;
+    border-top: 1px solid #ddd; /* Add a border to separate the description */
+}
+
+/* Job Row Hover Effect */
+.job-row:hover {
+    background-color: #8f1818; /* Highlight job row on hover */
+    cursor: pointer;
+}
+.apply-btn-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

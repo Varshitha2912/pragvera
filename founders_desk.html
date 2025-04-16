@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PragVera Consultants</title>
+    <link rel="stylesheet" href="style.css">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">  
+</head>
+<body>
+    <section class="header services-header">
+        <nav>
+            <div class="logo-container">
+                <a href="index.html"><img class="home-logo" src="images\PragVera_new_logo.png" alt="logo2"></a>
+                <a href="index.html"><img class="secondary-logo" src="images\PragVera.png" alt="logo2"></a>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="founders_desk.html">Founder's Desk</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </section>
+    <section class="services-intro">
+        <div class="intro-text">
+            <h2>Founder's Desk</h2>
+            <p>From the Founder's Desk</p>
+        </div>
+    </section>
+    <section class="founders-desk-section">
+        <div class="founders-desk-container">
+            <!-- Content on the Left -->
+            <div class="founders-content">
+                <p>
+                    After dedicating over 30 years to serving diverse industry sectors, I recognized a persistent challenge — the gap between business growth expectations and actual outcomes. This realization became the driving force behind the creation of PragVera Consultants.
+
+What began as a vision to address this gap has grown into a dynamic consultancy committed to delivering practical, effective solutions tailored to evolving market demands. The unwavering support and trust of our customers, partners, and an incredibly dedicated team have been the foundation of this journey. I remain deeply grateful to everyone who has placed their confidence in PragVera Consultants and contributed to our growth and success.</p>
+                <p>
+                    Ever thankful to our customers, partners and team for their unparalleled faith and encouragement through this journey.</p>
+            </div>
+    
+            <!-- Photo on the Right -->
+            <div class="founders-photo">
+                <img src="images/founder.jpg" alt="Founder's Photo">
+            </div>
+        </div>
+    </section>
+    <section class="main-container">
+        <div class="vision-mission-values">
+            <!-- Mission Section -->
+            <div class="vmv-box mission-box">
+                <h3>Our Mission</h3>
+                <p>Build a strong pool of next generation talent to embrace the challenging future environment in the world of business.</p>
+            </div>
+            <div class="vmv">
+                <div>
+                    <img src="images\vmv.png">
+                </div>
+            </div>
+            <!-- Vision Section -->
+            <div class="vmv-box vision-box">
+                <h3>Our Vision</h3>
+                <p>Deliver high enterprise value through a highly talented professional team across the globe.</p>
+            </div>  
+        </div>
+        <h3 class="values-heading">Our Values</h3> 
+        <div class="values-list">
+            <div class="value-item">
+                <h4>Integrity</h4>
+                <p>Transparency and ethical decision-making.</p>
+            </div>
+            <div class="value-item">
+                <h4>Excellence</h4>
+                <p>Delivering high-quality, innovative solutions.</p>
+            </div>
+            <div class="value-item">
+                <h4>Collaboration</h4>
+                <p>Encouraging teamwork and knowledge sharing.</p>
+            </div>
+            <div class="value-item">
+                <h4>Sustainability</h4>
+                <p>Promoting long-term growth and minimizing environmental impact.</p>
+            </div>
+            <div class="value-item">
+                <h4>Customer-Centricity</h4>
+                <p>Prioritizing client needs with tailored solutions.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Get in touch</h4>
+                <p><a href="mailto:enquiries@pragvera.com">enquiries@pragvera.com</a></p>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <p><a href="https://in.linkedin.com/company/pragvera" target="_blank">LinkedIn</a></p>
+            </div>
+            <div class="footer-column">
+                <h4>PragVera Consultants</h4>
+                <p>#6, 2nd & 3rd floor, Shivashakti,</p>
+                <p>11th cross road, Chord Road,</p>
+                <p>Rajajinagar, Bengaluru 560086,</p>
+                <p>Karnataka,India.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="founders_desk.html">Founders Desk</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <p>&copy; 2025 PragVera Consultants. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById("navLinks");
+            if (navLinks.style.display === "block") {
+                navLinks.style.display = "none"; // Hide the menu
+            } else {
+                navLinks.style.display = "block"; // Show the menu
+            }
+        }
+    </script>
+    </body> 
+    </html>
