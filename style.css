@@ -140,6 +140,7 @@ nav {
     grid-auto-rows: 1fr;
     border-radius: 5px; /* Rounded corners */
     max-width: 1200px; /* Limit the width of the container */
+    
 }
 
 .services-header .text-box {
@@ -1232,8 +1233,11 @@ footer {
 }
 /* Career Highlights Section */
 .career-highlights {
-    padding: 50px 20px;
-    background-color: #f9f9f9; /* Light background */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding: 50px 20px; /* Add padding for spacing */
+    color: white; /* Ensure text is readable on the background */
 }
 
 .highlight-container {
@@ -1412,10 +1416,4 @@ footer {
 .job-row:hover {
     background-color: #8f1818; /* Highlight job row on hover */
     cursor: pointer;
-}
-.apply-btn-container {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: #757373;
 }
