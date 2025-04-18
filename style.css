@@ -50,6 +50,11 @@ nav {
     height: 40px; /* Adjust the size of the secondary logo */
 }
 
+@media (max-width: 700px) {
+    .services-header .logo-container {
+        margin-top: 20%;/* Reduce spacing between logos */
+    }
+}
 .nav-links ul {
     display: flex;
     list-style: none; /* Remove default list styling */
@@ -99,6 +104,28 @@ nav {
     text-shadow: 3px 3px 4px rgba(250, 249, 249, 0.896);
 
 }
+@media (max-width: 768px) {
+    .text-box {
+        max-width: 400px; /* Reduce the width for tablets */
+        font-size: 16px; /* Adjust font size */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    .text-box h2 {
+        font-size: 20px; /* Reduce heading size */
+        line-height: 1.4; /* Adjust line height for readability */
+    }
+
+    .text-box a.hero-btn {
+        font-size: 14px; /* Reduce button font size */
+        padding: 8px 16px; /* Adjust button padding */
+    }
+    .header {
+        height: 50vh; /* Reduce height for smaller screens */
+        padding: 10px; /* Adjust padding */
+    }
+}
+
 /* Services Page Header */
 .services-header {
     margin-top: 3.2%;
@@ -351,7 +378,7 @@ nav {
         position: absolute;
         top: 60px; /* Adjust based on your nav height */
         right: 20px;
-        background-color: rgba(255, 255, 255, 0.721); /* Background for the dropdown */
+        background-color: rgba(255, 255, 255, 0.803); /* Background for the dropdown */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
         padding: 10px;
         border-radius: 5px; /* Optional rounded corners */
